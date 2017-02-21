@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="format-detection" content="telephone=no">
+
+
+
+    <title>{{ title|default('!! НАДО ЧТО БЫ БЫЛ ТАЙТЛ') }}</title>
+    <meta name="description" content="{{ description }}">
+
+    {# FIXME: вставить реальные данные для Facebook #}
+    {# Подребнее тут https://developers.facebook.com/docs/sharing/opengraph/using-objects https://developers.facebook.com/docs/opengraph/getting-started #}
+    <meta property="og:title" content="">
+    <meta property="og:description" content="">
+    <meta property="og:image" content="">
+
+
+    {# FIXME: вставить реальные данные для Twitter #}
+    {# Подробнее тут: https://dev.twitter.com/docs/cards #}
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@site_account">
+    <meta name="twitter:creator" content="@individual_account">
+    <meta name="twitter:url" content="http://www.example.com/path/to/page.html">
+    <meta name="twitter:title" content="">
+    <meta name="twitter:description" content="">
+    <meta name="twitter:image" content="http://www.example.com/path/to/image.jpg">
+
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">{# FIXME сменить нужную #}
+
+    <meta name="theme-color" content="#ff69b4">{# FIXME сменить на цвет сайта #}
+
+
+    {% block headEnd %}
+    {% endblock %}
+</head>
+<body class="page">
+    <!--[if lt IE 8]>
+    <div class="page__old-browser">Вы используете <strong>устаревщий</strong> браузер. Пожалуста <a href="http://browsehappy.com/">обновите ваш браузер</a>.</div>
+    <![endif]-->
+
+    {% block bodyStart %}
+    {% endblock %}
+
+    <div class="page__main">
+        {% block content %}
+        {% endblock %}
+    </div>
+
+    {% block bodyEnd %}
+    {% endblock %}
+</body>
+</html>

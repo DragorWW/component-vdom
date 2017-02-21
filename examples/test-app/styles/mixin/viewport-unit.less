@@ -1,0 +1,16 @@
+.viewport-unit-height(@target, @size: 900) {
+    @vw-context: (@size * 0.01) * 1px;
+    @viewport-unit-height: (@target / @vw-context) * 1vh;
+}
+.viewport-unit-width(@target, @size: 1440) {
+    @vw-context: (@size * 0.01) * 1px;
+    @viewport-unit-width: (@target / @vw-context) * 1vw;
+}
+.viewport-unit-max(@target, @size: 900) {
+    @vw-context: (@size * 0.01) * 1px;
+    @viewport-unit-max: (@target / @vw-context) * 1vmax;
+}
+.viewport-unit-min(@target, @size: 1440) {
+    @vw-context: (@size * 0.01) * 1px;
+    @viewport-unit-min: (@target / @vw-context) * 1vmin;
+}

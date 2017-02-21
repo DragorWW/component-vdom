@@ -1,0 +1,19 @@
+@fontUnits: 'rem';
+
+
+.font-size(@sizeValue: 10, @lineHeight: false) {
+    & when (@fontUnits = 'rem') {
+        @remSize: @sizeValue / 10;
+        font-size: ~"@{remSize}rem";
+    }
+    & when not(@fontUnits = 'rem') {
+        font-size: ~"@{sizeValue}@{fontUnits}";
+    }
+    & when not(@lineHeight = false) and not(@fontUnits = 'rem') {
+        line-height: ~"@{lineHeight}@{fontUnits}";
+    }
+    & when not(@lineHeight = false) and (@fontUnits = 'rem') {
+        @remSize: @lineHeight / 10;
+        line-height: ~"@{remSize}rem";
+    }
+}

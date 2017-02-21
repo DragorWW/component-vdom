@@ -1,0 +1,15 @@
+{% set ui = ui|default({}) %}
+{% set ui = ui|merge({size: 'normal'}) %}
+{% set ui = ui|merge({type: 'text'}) %}
+
+<div class="field-text">
+    <input class="field-text__input
+                  field-text__input_size_{{ ui.size|default('normal') }}
+                 "
+           type="{{ ui.type|default('text') }}"
+            {% if data.id %} id="{{ data.id }}" {% endif %}
+           name="{{ data.name }}"
+            {% if ui.placeholder %} placeholder="{{ ui.placeholder|e }}" {% endif %}
+           value="{{ data.value|e }}"
+    >
+</div>

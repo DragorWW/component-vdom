@@ -1,0 +1,19 @@
+{% extends "./layouts/main.twig" %}
+
+{% block headEnd %}
+    <script src="/build/dll.vendor.js"></script>
+    <script src="/build/common.min.js"></script>
+    <link rel="stylesheet" href="/build/common.min.css">
+
+    <link rel="stylesheet" href="/build/main.min.css">
+{% endblock %}
+
+{% block content %}
+    <div id="root">
+        {% component 'entry/Main' with {data: userData} only %}
+    </div>
+{% endblock %}
+
+{% block bodyEnd %}
+    <script src="/build/main.min.js"></script>
+{% endblock %}

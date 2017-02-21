@@ -1,0 +1,29 @@
+.font-weight(@type: normal) {
+    & when (@type = thin) {
+        font-weight: 100;
+    }
+    & when (@type = light) {
+        font-weight: 300;
+    }
+    & when (@type = normal) {
+        font-weight: 400;
+    }
+    & when (@type = regular) {
+        font-weight: 400;
+    }
+    & when (@type = medium) {
+        font-weight: 500;
+    }
+    & when (@type = semiBold) {
+        font-weight: 600;
+    }
+    & when (@type = bold) {
+        font-weight: 700;
+    }
+    & when (@type = extraBold) {
+        font-weight: 800;
+    }
+    & when (@type = black) {
+        font-weight: 900;
+    }
+}
